@@ -1,0 +1,128 @@
+[
+{
+    "nome": "Direitos Humanos",
+    "numero": "100",
+    "descricao": "Canal para relatar violações de direitos humanos, como violência contra crianças, idosos, pessoas com deficiência e outros grupos vulneráveis.",
+    "link": "https://www.gov.br/mdh/pt-br/ondh"
+},
+{
+    "nome": "Programa de Emprego/Renda - Caixa",
+    "numero": "111",
+    "descricao": "Central de informações da Caixa Econômica Federal sobre benefícios sociais, como o Bolsa Família, e programas de geração de renda.",
+    "link": "https://www.caixa.gov.br/programas-sociais/Paginas/default.aspx"
+},
+{
+    "nome": "Número Internacional de Emergência",
+    "numero": "112",
+    "descricao": "Número de emergência aceito em celulares no Brasil, redirecionado para o 190 (Polícia Militar).",
+    "link": "https://tecnoblog.net/noticias/anatel-aprova-numeros-911-112-emergencia-brasil/"
+},
+{
+    "nome": "Conselhos Tutelares",
+    "numero": "125",
+    "descricao": "Contato para Conselhos Tutelares, responsáveis por proteger os direitos de crianças e adolescentes.",
+    "link": "https://www.gov.br/mdh/pt-br/navegue-por-temas/crianca-e-adolescente/conselhos-tutelares"
+},
+{
+    "nome": "Emergência Mercosul",
+    "numero": "128",
+    "descricao": "Número de emergência para turistas do Mercosul, podendo não estar ativo em todas as regiões.",
+    "link": "https://www.mercosur.int/"
+},
+{
+    "nome": "Atendimento a Dependentes Químicos",
+    "numero": "132",
+    "descricao": "Serviço de apoio e informações sobre uso de drogas e álcool, com suporte para usuários e familiares.",
+    "link": "https://mdbf.com.br/artigo/numeros-de-emergencia/"
+},
+{
+    "nome": "Guarda Municipal",
+    "numero": "153",
+    "descricao": "Número para acionar a Guarda Civil Municipal, que atua na segurança local e proteção do patrimônio público.",
+    "link": "https://www.gov.br/anatel/pt-br/assuntos/noticias/operadoras-deverao-programar-numero-153-da-guarda-municipal-como-servico-publico-de-emergencia"
+},
+{
+    "nome": "Central de Atendimento à Mulher",
+    "numero": "180",
+    "descricao": "Canal para denúncias de violência contra a mulher, com acolhimento e orientação sobre direitos e serviços.",
+    "link": "https://www.gov.br/mdh/pt-br/ligue180"
+},
+{
+    "nome": "Disque Denúncia",
+    "numero": "181",
+    "descricao": "Canal para denúncias anônimas sobre crimes, como tráfico de drogas e violência.",
+    "link": "https://pt.wikipedia.org/wiki/Disque_Den%C3%BAncia"
+},
+{
+    "nome": "Marinha - Salvamento Marítimo/Fluvial",
+    "numero": "185",
+    "descricao": "Serviço de emergência da Marinha para resgates no mar ou em rios.",
+    "link": "https://www.marinha.mil.br/salvamar-brasil/"
+},
+{
+    "nome": "Linha da Vida (CVV)",
+    "numero": "188",
+    "descricao": "Apoio emocional e prevenção do suicídio, oferecido pelo Centro de Valorização da Vida (CVV).",
+    "link": "https://www.cvv.org.br/"
+},
+{
+    "nome": "Polícia Militar",
+    "numero": "190",
+    "descricao": "Número de emergência para acionar a Polícia Militar em casos de crimes ou situações de perigo imediato.",
+    "link": "https://fdr.com.br/2025/08/11/190-192-ou-193-entenda-para-qual-numero-ligar-em-caso-de-emergencia/"
+},
+{
+    "nome": "Polícia Rodoviária Federal",
+    "numero": "191",
+    "descricao": "Emergências e denúncias em rodovias federais, como acidentes e crimes.",
+    "link": "https://www.gov.br/prf/pt-br"
+},
+{
+    "nome": "SAMU",
+    "numero": "192",
+    "descricao": "Serviço de ambulância para emergências médicas e atendimento pré-hospitalar rápido.",
+    "link": "https://fdr.com.br/2025/08/11/190-192-ou-193-entenda-para-qual-numero-ligar-em-caso-de-emergencia/"
+},
+{
+    "nome": "Corpo de Bombeiros",
+    "numero": "193",
+    "descricao": "Emergências como incêndios, resgates e desastres naturais.",
+    "link": "https://fdr.com.br/2025/08/11/190-192-ou-193-entenda-para-qual-numero-ligar-em-caso-de-emergencia/"
+},
+{
+    "nome": "Polícia Federal",
+    "numero": "194",
+    "descricao": "Canal para denúncias de crimes federais, como contrabando e crimes cibernéticos.",
+    "link": "https://www.gov.br/pf/pt-br/acesso-a-informacao/institucional/quem-e-quem"
+},
+{
+    "nome": "SABESP",
+    "numero": "195",
+    "descricao": "Atendimento para emergências de água e esgoto no estado de São Paulo.",
+    "link": "https://site.sabesp.com.br/"
+},
+{
+    "nome": "Apoio COVID-19",
+    "numero": "196",
+    "descricao": "Informações e orientações sobre COVID-19 e saúde em geral, disponível em alguns estados.",
+    "link": "https://ictq.com.br/farmacia-clinica/2319-pais-tera-linha-de-emergencia-para-atender-pessoas-com-doenca-mental"
+},
+{
+    "nome": "Polícia Civil",
+    "numero": "197",
+    "descricao": "Denúncias e informações sobre investigações criminais junto à Polícia Civil.",
+    "link": "https://pt.wikipedia.org/wiki/Pol%C3%ADcia_Civil_do_Brasil"
+},
+{
+    "nome": "Polícia Rodoviária Estadual",
+    "numero": "198",
+    "descricao": "Emergências e informações sobre trânsito em rodovias estaduais.",
+    "link": "https://www.seguranca.pr.gov.br/Telefones-Uteis"
+},
+{
+    "nome": "Defesa Civil",
+    "numero": "199",
+    "descricao": "Atendimento em desastres naturais, como enchentes e deslizamentos, e ações preventivas.",
+    "link": "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil"
+}
+]

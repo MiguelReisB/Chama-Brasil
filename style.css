@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Bebas+Neue&family=Stalinist+One&display=swap'); 
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .aldrich-regular {
+    font-family: "Aldrich", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+}
+
+:root {
+    --primary-color: rgb(255, 255, 0); /* Cor primária (azul claro) */
+    --secondary-color: #ffffff; /* Cor secundária (cinza claro) */
+    --tertiary-color: #003264; /* Cor terciária (cinza médio) */
+    --bg-color:#1f3f19; /* Cor de fundo (cinza escuro) */
+    /* Overlay controls: ajuste RGB, alpha (0-1) e blur globalmente */
+    --overlay-r: 0;
+    --overlay-g: 0;
+    --overlay-b: 125;
+    --overlay-alpha: 0.7; /* visibilidade do overlay (0 = transparente, 1 = opaco) */
+    --overlay-blur: 3px; /* grau de desfoque aplicado à imagem de fundo */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    color: var(--secondary-color); /* Define a cor do texto padrão usando uma variável */
+    font-family: "Quicksand", sans-serif; /* Define a família da fonte */
+    position: relative; /* Necessário para o posicionamento do pseudo-elemento */
+    
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Cobre toda a tela, mesmo com rolagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* overlay control using CSS variables so color/alpha/blur are configurable */
+    background-image: linear-gradient(rgba(var(--overlay-r), var(--overlay-g), var(--overlay-b), var(--overlay-alpha)), rgba(var(--overlay-r), var(--overlay-g), var(--overlay-b), var(--overlay-alpha))), url('https://imgs.search.brave.com/bABtb-UhpAvsAes08_i8yR06BcwFkzN10pImMbiJohM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMi1j/YXNhdm9ndWUuZ2xi/aW1nLmNvbS9DbDJ3/bGs2SHlaVXkzY1kz/MzhHam9razRBZE09/LzB4MDoyMTI3eDE0/MTAvOTg0eDAvc21h/cnQvZmlsdGVyczpz/dHJpcF9pY2MoKS9p/LnMzLmdsYmltZy5j/b20vdjEvQVVUSF9k/NzJmZDRiZjBhZjc0/YzBjODlkMjdhNWEy/MjZkYmJmOC9pbnRl/cm5hbF9waG90b3Mv/YnMvMjAyMy94L0Qv/RmxER3JMUmJLdlEw/ampZbjlMekEvMDQt/YXMtcGFpc2FnZW5z/LW5hdHVyYWlzLW1h/aXMtbGluZGFzLWRv/LWJyYXNpbC1wYW50/YW5hbC1taW4uanBn');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    filter: blur(var(--overlay-blur)); /* blur control */
+    opacity: 1; /* gradient already contains alpha */
+    pointer-events: none; /* allow clicks through overlay */
+    z-index: -1; /* Coloca o pseudo-elemento atrás de todo o conteúdo */
+}
+
+header {
+    padding: 0.6rem 1rem; 
+    display: flex;
+    /* Remover overlay extra do header: deixar transparente para que apenas o body::before
+       contenha o overlay azul. Mantém legibilidade via contraste do texto. */
+    background-color: transparent;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.header-top h1 {
+    text-align: center;
+}
+
+header h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 6.3rem; /* Tamanho da fonte */
+    margin: 0; /* Remove a margem padrão */
+    font-weight: 500; /* Peso da fonte (médio) */
+    white-space: nowrap; /* Impede a quebra de linha do texto */
+}
+
+/* Gradiente de texto amarelo -> azul para o título principal (CHAMA, BRASIL!) */
+header h1 {
+    /* fallback color for very old browsers */
+    color: var(--primary-color);
+    /* gradient background that will be clipped to the text */
+    background: linear-gradient(90deg, rgb(14, 165, 14) 0%, yellow 25%, rgb(7, 89, 170) 50%, white 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* required for WebKit */
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 2px;
+}
+.logo-header {
+    width: 250px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria 3 colunas de largura igual */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px;
+}
+
+.no-results-card {
+    background-color: #1f3f19; /* Mesma cor de fundo dos outros cards */
+    color: var(--secondary-color);
+    border: 2.5px solid #000000;
+    border-radius: 35px;
+    padding: 30px;
+    text-align: center;
+    grid-column: 1 / -1; /* Ocupa todas as colunas do grid */
+}
+.search-container input {
+    padding: 0.375rem 0.375rem; /* Espaçamento interno */
+    border-radius: 3rem; /* Arredonda as bordas */
+    border:2px solid black; /* Define a borda */
+    background: rgb(255, 255, 255); /* Cor de fundo */
+    font-family: inherit; /* Herda a família da fonte do elemento pai */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    transition: all 0.2s ease; /* Adiciona uma transição suave para todas as propriedades */
+    width: 25.5rem; /* Largura do input */
+    color: rgb(0, 0, 0); /* Cor do texto digitado */
+    display: inline-block; /* Exibe como bloco inline */
+}
+
+.search-container input::placeholder {
+    font-size: 1.2rem; /* Tamanho da fonte do placeholder */
+    font-weight: 400; /* Peso da fonte do placeholder */
+    color: black; /* Cor do texto do placeholder */
+}
+
+.search-container input:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    border-color: var(--bg-color); /* Muda a cor da borda ao focar */
+    box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adiciona uma sombra de caixa para indicar foco */
+}
+
+#botao-busca {
+    display: none; /* Oculta o botão de busca */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    border-radius: 1rem; /* Arredonda as bordas */
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    font-family: inherit; /* Herda a família da fonte */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    white-space: nowrap; /* Impede a quebra de linha do texto */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Transição suave para cor de fundo e cor do texto */
+    background-color: var(--bg-color); /* Cor de fundo */
+    color: var(--secondary-color); /* Cor do texto */
+    border: 2px solid var(--bg-color); /* Adiciona uma borda */
+}
+
+#botao-busca:hover {
+    background-color: blue; /* Muda a cor de fundo ao passar o mouse */
+    color: white; /* Muda a cor do texto ao passar o mouse */
+    border: 1px rgb(38, 53, 121) solid; /* Muda a cor da borda ao passar o mouse */
+}
+
+#botao-busca:active {
+    transform: scale(0.90); /* Efeito de clique (diminui o tamanho) */
+}
+
+main {
+    /* Remover overlay extra do main: deixe transparente para que o body::before
+       controle o tom azulado do fundo. */
+    background-color: transparent;
+    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
+    max-width: 80rem; /* Largura máxima do conteúdo principal */
+    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente */
+    height: calc(100vh - 10rem - 4rem); /* Calcula a altura para preencher o espaço restante da tela */
+}
+.card {
+    border: 2.5px solid #000000;
+    border-radius: 35px;
+    padding: 30px;
+    text-align: center;
+    background-color: #1f3f19;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+article {
+    background: none; /* Sem cor de fundo */
+    border-radius: 0; /* Sem bordas arredondadas */
+    padding: 0; /* Remove o padding */
+    padding: 0 1rem; /* Espaçamento interno nos lados */
+    margin-bottom: 1.25rem; /* Margem inferior */
+    box-shadow: none; /* Sem sombra */
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Transição suave */
+    border-bottom: 1px solid var(--bg-color); /* Borda inferior */
+    padding-bottom: 1.5rem; /* Espaçamento interno inferior */
+    flex-grow: 1; /* Faz o article crescer para ocupar o espaço disponível */
+}
+
+article:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+    cursor: pointer; /* Muda o cursor para uma mão */
+}
+
+article h2 {
+    font-family: "Aldrich", sans-serif;
+    margin-top: 0; /* Remove a margem superior */
+    font-weight: 600; /* Peso da fonte */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    border-bottom: none; /* Sem borda inferior */
+    padding-bottom: 0; /* Sem espaçamento interno inferior */
+    margin-bottom: 0.25rem; /* Margem inferior */
+    color: var(--primary-color); /* Cor do texto */
+}
+
+article p {
+    margin: 0.5rem 0; /* Margem superior e inferior */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    font-size: 1.25rem; /* Tamanho da fonte */
+    margin-bottom: 0.5rem; /* Margem inferior */
+    color: var(--secondary-color); /* Cor do texto */
+}
+
+article p strong {
+    color: var(--tertiary-color); /* Cor do texto em negrito */
+    font-weight: 400; /* Peso da fonte */
+}
+
+article a {
+    color: rgb(128, 128, 235); /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    font-weight: 500; /* Peso da fonte */
+}
+
+article a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.footer {
+    position: sticky; /* Posicionamento absoluto em relação ao elemento pai posicionado */
+    bottom: 0; /* Alinha na parte inferior */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total */
+    color: white; /* Cor do texto */
+    background-color: rgb(6, 6, 77); /* Cor de fundo */
+    padding: 0.002%; /* Espaçamento interno */
+    font-size: 1.8rem; /* Tamanho da fonte */
+}
+
+footer li:hover{
+    transform: scale(1.02);
+    transition: transform 150ms ease;
+}
+
+.footer-links {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    display: flex; /* Habilita o layout flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaçamento entre os links */
+    align-items: center;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: inherit; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.2s; /* Transição suave para a cor */
+}
+
+/* Aumenta o tamanho dos ícones no rodapé (img, svg ou font-icon) */
+.footer-links a img,
+.footer-links a svg,
+.footer-links a i {
+    width: 3.0rem; /* Largura do ícone */
+    height: 3.0rem; /* Altura do ícone */
+    font-size: 1.6rem; /* Para ícones em fonte (ex.: Font Awesome) */
+    display: inline-block;
+}
+
+.footer-links a:hover img,
+.footer-links a:hover svg,
+.footer-links a:hover i {
+    transform: scale(1.15);
+    transition: transform 150ms ease;
+}
+
+@media (max-width: 768px) {
+    header { /* Estilos para telas com largura máxima de 768px */
+        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
+        padding: 1rem; /* Reduz o espaçamento interno */
+    }
+    .cards-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores (modo retrato) */
+    }
+
+
+    div input { /* Estilos para o input em telas menores */
+        width: 90vw; /* Largura baseada na largura da viewport */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    }
+
+    main { /* Estilos para o main em telas menores */
+        padding: 0 1rem; /* Adiciona espaçamento lateral */
+    }
+
+    article:hover { /* Estilos para o article em telas menores */
+        transform: none; /* Remove o efeito de escala ao passar o mouse */
+    }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em modo paisagem */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-top h1 { /* Estilos para o h1 em telas com largura máxima de 480px */
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
+        max-width: 70%; /* Define uma largura máxima */
+        word-wrap: break-word; /* Permite a quebra de palavras longas */
+    }
+
+    .search-container input, /* Estilos para o input e seu placeholder em telas muito pequenas */
+    .search-container input::placeholder {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+
+    article h2 { /* Estilos para o h2 do article em telas muito pequenas */
+        font-size: 1.3rem; /* Reduz o tamanho da fonte */
+    }
+
+    .footer { /* Estilos para o rodapé em telas muito pequenas */
+        display: none; /* Oculta o rodapé */
+    }
+
+    button { /* Estilos para o botão em telas muito pequenas */
+        margin-top: 1rem; /* Adiciona margem no topo */
+    }
+}
