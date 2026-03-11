@@ -1,4 +1,8 @@
-# 📞 Objetivo do Projeto 🇧🇷
+<p align="center">
+  <img src="assets/gif/PreviewChamaBrasil.gif">
+</p>
+
+# <p align="center"> 📞 Objetivo do Projeto 🇧🇷</p>
 
 Criar um local unificado, simples e visualmente agradável onde qualquer pessoa possa:
 
