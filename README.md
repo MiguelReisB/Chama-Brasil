@@ -61,10 +61,6 @@ Compara o termo com:
   
   E então atualiza os cards dinamicamente.
 
-  # Autor
+  <h3 align="center">Acesse a página do projeto por <a href="https://miguelreisb.github.io/Chama-Brasil/" target="_blank">Aqui</a>.</h3>
 
-Miguel Ribeiro Borges Reis
-
-🔗 GitHub: https://github.com/MiguelReisB
-
-🔗 LinkedIn: https://www.linkedin.com/in/miguel-reis-4a320b340/
+# <h2 align="center">Chama, Brasil!</h2>
